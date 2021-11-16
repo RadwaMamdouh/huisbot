@@ -2,3 +2,31 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+
+//DIRECTIONS
+$ltr: "body[dir=" ltr "]";
+$rtl: "body[dir=" rtl "]";
+
+//COLORS
+$purpleColor: #634ddc;
+$greenColor: #57dcc2;
+
+//MIXINS
+@mixin buttonStyle($bgColor, $frontColor, $borderColor) {
+  background-color: $bgColor !important;
+  color: $frontColor !important;
+  border: 1px solid $borderColor !important;
+
+  &:hover {
+    background-color: $frontColor !important;
+    color: $bgColor !important;
+    border: 1px solid $bgColor !important;
+  }
+}
+
+//Placeholders
+%btn {
+  height: auto !important;
+  min-width: unset !important;
+  box-shadow: none !important;
+}
