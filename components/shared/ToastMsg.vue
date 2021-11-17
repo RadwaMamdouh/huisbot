@@ -42,7 +42,13 @@ export default {
 .toast_holder {
   position: absolute;
   top: 65px;
-  right: 0;
+  #{$ltr} & {
+    right: 0;
+  }
+  #{$rtl} & {
+    left: 0;
+  }
+
   height: 120px;
 
   @media (max-width: 600.98px) {
@@ -52,6 +58,10 @@ export default {
   & > img {
     width: 100%;
     height: 100%;
+
+    #{$rtl} & {
+      transform: rotateY(180deg);
+    }
   }
 
   .toast_content {
@@ -60,7 +70,12 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 12px 16px 12px 59px;
+    #{$ltr} & {
+      padding: 12px 16px 12px 59px;
+    }
+    #{$rtl} & {
+      padding: 12px 59px 12px 16px;
+    }
 
     .head {
       display: flex;
