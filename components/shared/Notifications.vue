@@ -7,7 +7,15 @@
         class="notifications_selection"
         :class="{ withScroll: withScroll }"
       >
-        <img src="@/assets/img/notifications.svg" alt="" />
+        <div class="icon">
+          <img src="@/assets/img/notifications.svg" alt="" v-if="!withScroll" />
+          <img
+            src="@/assets/img/notifications-purple.svg"
+            alt=""
+            v-if="withScroll"
+          />
+          <span class="count">12</span>
+        </div>
       </v-btn>
     </template>
     <v-list class="notifications_selection_list">
@@ -65,16 +73,62 @@ export default {
 .notifications_selection {
   &.v-btn {
     padding: 5px !important;
-    background-color: #5945c6 !important;
+    background-color: transparent !important;
     border-radius: 2px;
-    border-color: $purpleColor !important;
+    border-color: transparent !important;
     box-shadow: none !important;
     height: auto !important;
     min-width: auto !important;
-    backdrop-filter: brightness(3) blur(10px) opacity(0);
+    border: 1px solid transparent;
 
     &::before {
       display: none;
+    }
+
+    &:hover {
+      border-color: #fff !important;
+    }
+
+    .icon {
+      font-size: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .count {
+        position: absolute;
+        top: 0;
+        #{$ltr} & {
+          right: 0;
+        }
+        #{$rtl} & {
+          left: 0;
+        }
+        z-index: 1;
+        padding: 2px;
+        background-color: #de5250;
+        color: #fff;
+        font-size: 6px;
+        border-radius: 100%;
+        min-width: 8px;
+        min-height: 8px;
+        #{$ltr} & {
+          transform: translateX(50%);
+        }
+        #{$rtl} & {
+          transform: translateX(-50%);
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.withScroll {
+      &:hover {
+        border-color: $purpleColor !important;
+      }
     }
   }
 

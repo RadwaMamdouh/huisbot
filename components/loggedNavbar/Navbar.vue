@@ -27,6 +27,8 @@
           </div>
         </div>
         <div class="app_header--right">
+          <!-- Invite Freinds -->
+          <InviteFreinds />
           <!-- Notifications -->
           <Notifications :with-scroll="!view.topOfPage" />
           <!-- Profile Selection -->
@@ -83,6 +85,7 @@
 import LangSelection from "@/components/shared/LangSelection";
 import ProfileSelection from "@/components/shared/ProfileSelection";
 import Notifications from "@/components/shared/Notifications";
+import InviteFreinds from "@/components/shared/InviteFreinds";
 
 export default {
   name: "LoggedNavbar",
@@ -91,6 +94,7 @@ export default {
     LangSelection,
     ProfileSelection,
     Notifications,
+    InviteFreinds,
   },
 
   data() {

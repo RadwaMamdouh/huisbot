@@ -56,6 +56,7 @@ export default {
     height: auto !important;
     min-width: auto !important;
     padding: 0 !important;
+    text-transform: capitalize !important;
 
     &::before {
       display: none;
