@@ -91,6 +91,7 @@ export default {
 
         input {
           width: 0;
+          padding: 0;
         }
       }
 

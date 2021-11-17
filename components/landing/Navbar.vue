@@ -34,7 +34,11 @@
             Register
           </v-btn>
           <!-- Language Selection -->
-          <LangSelection :landing="true" :with-scroll="!view.topOfPage" />
+          <LangSelection
+            :landing="true"
+            :with-scroll="!view.topOfPage"
+            :responsive="false"
+          />
           <!-- Icon to open menu in responsive -->
           <v-app-bar-nav-icon
             class="d-block d-md-none"
@@ -49,6 +53,9 @@
       <v-btn class="close_Menu" @click="drawer = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
+      <!-- Language Selection -->
+      <LangSelection :landing="true" :responsive="true" />
+      <!-- sidebar menu in responsive -->
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
@@ -74,8 +81,8 @@
         </v-list-item-group>
       </v-list>
       <div class="menu_btns">
-        <v-btn to="/login" class="btnStyle loginBtn">Login</v-btn>
-        <v-btn to="/register" class="btnStyle registerBtn">Register</v-btn>
+        <v-btn to="/auth/login" class="btnStyle loginBtn">Login</v-btn>
+        <v-btn to="/auth/register" class="btnStyle registerBtn">Register</v-btn>
       </div>
     </v-navigation-drawer>
   </div>
@@ -352,6 +359,11 @@ export default {
       max-width: 70%;
       margin: 0 auto;
     }
+  }
+
+  .lang_selection {
+    max-width: 50%;
+    margin: 20px auto;
   }
 }
 </style>

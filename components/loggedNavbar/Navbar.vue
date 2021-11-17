@@ -57,11 +57,7 @@
         <v-icon>mdi-close</v-icon>
       </v-btn>
       <!-- Language Selection -->
-      <LangSelection
-        :landing="true"
-        :with-scroll="!view.topOfPage"
-        :responsive="true"
-      />
+      <LangSelection :landing="true" :responsive="true" />
       <!-- sidebar menu in responsive -->
       <v-list nav dense>
         <v-list-item-group
@@ -88,7 +84,7 @@
         </v-list-item-group>
       </v-list>
       <!-- Profile Selection -->
-      <ProfileSelection :with-scroll="!view.topOfPage" :responsive="true" />
+      <ProfileSelection :responsive="true" />
     </v-navigation-drawer>
   </div>
 </template>
