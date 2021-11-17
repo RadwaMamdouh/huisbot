@@ -14,37 +14,40 @@
       </template>
 
       <v-card class="invite_freinds_dialog--content">
-        <div class="head">
-          <div class="title">Invite Friends</div>
-          <v-btn text @click="dialog = false" class="close_btn">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </div>
-        <div class="invite_more">
-          <div class="left">
-            <div class="invite_more--tit">Let’s Invite More Users</div>
-            <div class="invite_more--desc">
-              Your can easily invite more friends to get points
+        <img src="@/assets/img/invite-freinds-bg.png" alt="" class="img_bg" />
+        <div class="wrapper">
+          <div class="head">
+            <div class="title">Invite Friends</div>
+            <v-btn text @click="dialog = false" class="close_btn">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </div>
+          <div class="invite_more">
+            <div class="left">
+              <div class="invite_more--tit">Let’s Invite More Users</div>
+              <div class="invite_more--desc">
+                Your can easily invite more friends to get points
+              </div>
+            </div>
+            <div class="right">
+              <img src="@/assets/img/invite-firends.png" alt="" />
             </div>
           </div>
-          <div class="right">
-            <img src="@/assets/img/invite-firends.png" alt="" />
-          </div>
-        </div>
-        <div class="link_invitation">
-          <div class="link_invitation--tit">Link of invitation</div>
-          <div class="link_invitation--input">
-            <v-text-field
-              label="Link of Invitation"
-              placeholder="https://dribbble.com/shots/15341571-Sisyphus-dashboard-profile-settings"
-              value="https://dribbble.com/shots/15341571-Sisyphus-dashboard-profile-settings"
-              hide-details
-              readonly
-              solo
-            ></v-text-field>
-            <v-btn text class="copy_btn">
-              <v-icon>mdi-content-copy</v-icon>
-            </v-btn>
+          <div class="link_invitation">
+            <div class="link_invitation--tit">Link of invitation</div>
+            <div class="link_invitation--input">
+              <v-text-field
+                label="Link of Invitation"
+                placeholder="https://dribbble.com/shots/15341571-Sisyphus-dashboard-profile-settings"
+                value="https://dribbble.com/shots/15341571-Sisyphus-dashboard-profile-settings"
+                hide-details
+                readonly
+                solo
+              ></v-text-field>
+              <v-btn text class="copy_btn">
+                <v-icon>mdi-content-copy</v-icon>
+              </v-btn>
+            </div>
           </div>
         </div>
       </v-card>
@@ -98,10 +101,10 @@ export default {
 .invite_freinds_dialog {
   max-width: 50%;
   box-shadow: none !important;
-  background-image: url("@/assets/img/invite-freinds-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+  @media (max-width: 1400.98px) {
+    max-width: 60%;
+  }
 
   @media (max-width: 1264.98px) {
     max-width: 75%;
@@ -114,10 +117,35 @@ export default {
   &--content {
     background-color: transparent !important;
     box-shadow: none !important;
-    padding: 100px 75px;
+    // padding: 100px 75px;
 
     @media (max-width: 600.98px) {
-      padding: 50px 20px;
+      padding: 0;
+    }
+
+    .img_bg {
+      width: 100%;
+      height: 100%;
+      // max-height: 400px;
+
+      @media (max-width: 600.98px) {
+        margin: 0;
+        height: 380px;
+      }
+    }
+
+    .wrapper {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 100px 100px 0;
+
+      @media (max-width: 600.98px) {
+        padding: 40px 45px;
+      }
     }
 
     .head {
@@ -180,6 +208,10 @@ export default {
 
       .right {
         img {
+          @media (max-width: 960.98px) {
+            width: 100%;
+          }
+
           @media (max-width: 600.98px) {
             max-width: 120px;
           }
