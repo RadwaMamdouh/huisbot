@@ -92,16 +92,19 @@
         <Testimonials />
       </section>
     </div>
+    <CompleteProfile />
   </div>
 </template>
 
 <script>
 import Testimonials from "@/components/landing/Testimonials";
+import CompleteProfile from "@/components/shared/CompleteProfile";
 
 export default {
   name: "Index",
   components: {
     Testimonials,
+    CompleteProfile,
   },
   layout: "landingLayout",
 };
