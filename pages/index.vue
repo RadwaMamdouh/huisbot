@@ -93,18 +93,21 @@
       </section>
     </div>
     <CompleteProfile />
+    <NotMember />
   </div>
 </template>
 
 <script>
 import Testimonials from "@/components/landing/Testimonials";
 import CompleteProfile from "@/components/shared/CompleteProfile";
+import NotMember from "@/components/shared/NotMember";
 
 export default {
   name: "Index",
   components: {
     Testimonials,
     CompleteProfile,
+    NotMember,
   },
   layout: "landingLayout",
 };
