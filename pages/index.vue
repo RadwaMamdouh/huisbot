@@ -92,8 +92,12 @@
         <Testimonials />
       </section>
     </div>
+    <!-- Complete Profile Modal -->
     <CompleteProfile />
+    <!-- Not Member Modal -->
     <NotMember />
+    <!-- Toast Message -->
+    <ToastMsg :icon="false" />
   </div>
 </template>
 
@@ -101,6 +105,7 @@
 import Testimonials from "@/components/landing/Testimonials";
 import CompleteProfile from "@/components/shared/CompleteProfile";
 import NotMember from "@/components/shared/NotMember";
+import ToastMsg from "@/components/shared/ToastMsg";
 
 export default {
   name: "Index",
@@ -108,6 +113,7 @@ export default {
     Testimonials,
     CompleteProfile,
     NotMember,
+    ToastMsg,
   },
   layout: "landingLayout",
 };
