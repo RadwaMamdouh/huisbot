@@ -143,6 +143,10 @@ export default {
   overflow-y: hidden !important;
   max-width: 25% !important;
 
+  @media (max-width: 960.98px) {
+    max-width: 90% !important;
+  }
+
   .notifications_selection_list {
     padding: 0 !important;
     &.v-list {
@@ -196,6 +200,7 @@ export default {
           .desc {
             font-size: 12px;
             color: #eaeaea;
+            word-break: break-word;
           }
         }
       }

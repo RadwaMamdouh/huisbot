@@ -103,10 +103,22 @@ export default {
   background-size: cover;
   background-position: center;
 
+  @media (max-width: 1264.98px) {
+    max-width: 75%;
+  }
+
+  @media (max-width: 960.98px) {
+    max-width: 95%;
+  }
+
   &--content {
     background-color: transparent !important;
     box-shadow: none !important;
     padding: 100px 75px;
+
+    @media (max-width: 600.98px) {
+      padding: 50px 20px;
+    }
 
     .head {
       display: flex;
@@ -141,17 +153,37 @@ export default {
       column-gap: 87px;
       margin-bottom: 5px;
 
+      @media (max-width: 600.98px) {
+        column-gap: 10px;
+      }
+
       &--tit {
         font-size: 18px;
         color: #313131;
         font-family: bokraFontBold, sans-serif;
         font-weight: 700;
         margin-bottom: 13px;
+
+        @media (max-width: 600.98px) {
+          font-size: 16px;
+        }
       }
 
       &--desc {
         font-size: 14px;
         color: #313131;
+
+        @media (max-width: 600.98px) {
+          font-size: 12px;
+        }
+      }
+
+      .right {
+        img {
+          @media (max-width: 600.98px) {
+            max-width: 120px;
+          }
+        }
       }
     }
 

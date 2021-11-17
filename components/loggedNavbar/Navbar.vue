@@ -32,9 +32,16 @@
           <!-- Notifications -->
           <Notifications :with-scroll="!view.topOfPage" />
           <!-- Profile Selection -->
-          <ProfileSelection :with-scroll="!view.topOfPage" />
+          <ProfileSelection
+            :with-scroll="!view.topOfPage"
+            :responsive="false"
+          />
           <!-- Language Selection -->
-          <LangSelection :landing="true" :with-scroll="!view.topOfPage" />
+          <LangSelection
+            :landing="true"
+            :with-scroll="!view.topOfPage"
+            :responsive="false"
+          />
           <!-- Icon to open menu in responsive -->
           <v-app-bar-nav-icon
             class="d-block d-md-none"
@@ -49,6 +56,13 @@
       <v-btn class="close_Menu" @click="drawer = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
+      <!-- Language Selection -->
+      <LangSelection
+        :landing="true"
+        :with-scroll="!view.topOfPage"
+        :responsive="true"
+      />
+      <!-- sidebar menu in responsive -->
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
@@ -73,10 +87,8 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-      <div class="menu_btns">
-        <v-btn to="/login" class="btnStyle loginBtn">Login</v-btn>
-        <v-btn to="/register" class="btnStyle registerBtn">Register</v-btn>
-      </div>
+      <!-- Profile Selection -->
+      <ProfileSelection :with-scroll="!view.topOfPage" :responsive="true" />
     </v-navigation-drawer>
   </div>
 </template>
@@ -149,6 +161,7 @@ export default {
         align-items: center;
         justify-content: center;
         height: 28px;
+        flex-shrink: 0;
 
         img {
           width: 100%;
@@ -214,6 +227,10 @@ export default {
       align-items: center;
       justify-content: flex-end;
       column-gap: 16px;
+
+      @media (max-width: 1264.98px) {
+        column-gap: 5px;
+      }
     }
   }
 
@@ -323,28 +340,13 @@ export default {
     }
   }
 
-  .menu_btns {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+  .profile_selection {
+    margin: 0 auto;
+  }
 
-    .loginBtn {
-      @include buttonStyle(#fff, $purpleColor, $purpleColor);
-      padding: 10px 20px;
-      text-transform: capitalize;
-      width: 100%;
-      max-width: 70%;
-      margin: 0 auto;
-    }
-
-    .registerBtn {
-      @include buttonStyle($greenColor, #fff, transparent);
-      padding: 10px 20px;
-      text-transform: capitalize;
-      width: 100%;
-      max-width: 70%;
-      margin: 0 auto;
-    }
+  .lang_selection {
+    max-width: 50%;
+    margin: 20px auto;
   }
 }
 </style>

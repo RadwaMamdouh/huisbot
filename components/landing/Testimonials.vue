@@ -80,64 +80,64 @@
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
 export default {
-  name: 'Testimonials',
+  name: "Testimonials",
   components: { VueperSlides, VueperSlide },
   data() {
     return {
       slides: [
-        { image: require('@/assets/img/people1.png') },
-        { image: require('@/assets/img/people2.png') },
-        { image: require('@/assets/img/people3.png') },
+        { image: require("@/assets/img/people1.png") },
+        { image: require("@/assets/img/people2.png") },
+        { image: require("@/assets/img/people3.png") },
       ],
       testimonialsData: [
         {
-          image: 'people1.png',
+          image: "people1.png",
           comment:
-            'Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ',
-          name: 'Ahmed Salah',
-          role: 'CEO of Wady',
+            "Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ",
+          name: "Ahmed Salah",
+          role: "CEO of Wady",
         },
         {
-          image: 'people2.png',
+          image: "people2.png",
           comment:
-            'Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ',
-          name: 'Mustafa Salah',
-          role: 'CEO of Wady',
+            "Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ",
+          name: "Mustafa Salah",
+          role: "CEO of Wady",
         },
         {
-          image: 'people3.png',
+          image: "people3.png",
           comment:
-            'Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ',
-          name: 'Khaled Salah',
-          role: 'CEO of Wady',
+            "Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ",
+          name: "Khaled Salah",
+          role: "CEO of Wady",
         },
         {
-          image: 'people4.png',
+          image: "people4.png",
           comment:
-            'Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ',
-          name: 'Omar Salah',
-          role: 'CEO of Wady',
+            "Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ",
+          name: "Omar Salah",
+          role: "CEO of Wady",
         },
         {
-          image: 'people5.png',
+          image: "people5.png",
           comment:
-            'Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ',
-          name: 'Muhammed Salah',
-          role: 'CEO of Wady',
+            "Forge links to your account on one of our supported cloud providers. Or, you can even provision a VPS on the custom provider of your choice.Forge links to your account on one of ",
+          name: "Muhammed Salah",
+          role: "CEO of Wady",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
 .testimonials {
-  background-image: url('@/assets/img/testi-section-bg.png');
+  background-image: url("@/assets/img/testi-section-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 95%;
   background-position: center;
@@ -242,6 +242,7 @@ export default {
       position: relative;
       width: 100%;
       max-width: calc(100% - 48px);
+      word-break: break-word;
 
       @media (max-width: 600.98px) {
         font-size: 14px;
@@ -253,7 +254,7 @@ export default {
       }
 
       &::before {
-        content: url('@/assets/img/double-quote-left.svg');
+        content: url("@/assets/img/double-quote-left.svg");
         position: absolute;
         #{$ltr} & {
           left: -24px;
@@ -266,7 +267,7 @@ export default {
       }
 
       &::after {
-        content: url('@/assets/img/double-quote-right.svg');
+        content: url("@/assets/img/double-quote-right.svg");
         position: absolute;
         #{$ltr} & {
           right: -22px;

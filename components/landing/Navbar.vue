@@ -143,6 +143,7 @@ export default {
         align-items: center;
         justify-content: center;
         height: 28px;
+        flex-shrink: 0;
 
         img {
           width: 100%;

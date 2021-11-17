@@ -12,12 +12,14 @@
       offsetY: true,
       contentClass: `${landing ? 'lang_menu_landing' : 'lang_menu'} ${
         withScroll ? 'withScrollMenu' : ''
-      }`,
+      } ${responsive ? 'responsive' : ''}`,
     }"
     hide-details="true"
     prepend-inner-icon="mdi-web"
     class="lang_selection"
-    :class="{ landingSelection: landing, withScroll: withScroll }"
+    :class="`${landing ? 'landingSelection' : ''} ${
+      withScroll ? 'withScroll' : ''
+    } ${responsive ? 'd-block d-md-none' : 'd-none d-md-block'}`"
   ></v-select>
 </template>
 
@@ -29,6 +31,9 @@ export default {
       type: Boolean,
     },
     withScroll: {
+      type: Boolean,
+    },
+    responsive: {
       type: Boolean,
     },
   },
@@ -207,6 +212,10 @@ export default {
       }
     }
   }
+
+  &.responsive {
+    z-index: 999 !important;
+  }
 }
 
 .lang_menu_landing {
@@ -275,6 +284,10 @@ export default {
         }
       }
     }
+  }
+
+  &.responsive {
+    z-index: 999 !important;
   }
 }
 </style>

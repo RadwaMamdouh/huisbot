@@ -1,11 +1,16 @@
 <template>
-  <v-menu offset-y contentClass="profile_menu">
+  <v-menu
+    offset-y
+    :contentClass="`profile_menu ${responsive ? 'responsive' : ''}`"
+  >
     <template v-slot:activator="{ on, attrs }">
       <v-btn
         v-bind="attrs"
         v-on="on"
         class="profile_selection"
-        :class="{ withScroll: withScroll }"
+        :class="`${withScroll ? 'withScroll' : ''} ${
+          responsive ? 'd-block d-md-none' : 'd-none d-md-block'
+        }`"
       >
         <div class="profile_img">
           <img src="@/assets/img/profile.png" alt="" />
@@ -37,6 +42,9 @@ export default {
 
   props: {
     withScroll: {
+      type: Boolean,
+    },
+    responsive: {
       type: Boolean,
     },
   },
@@ -168,6 +176,10 @@ export default {
         }
       }
     }
+  }
+
+  &.responsive {
+    z-index: 999 !important;
   }
 }
 </style>
