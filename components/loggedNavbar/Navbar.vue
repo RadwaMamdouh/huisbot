@@ -1,5 +1,8 @@
 <template>
-  <div class="app_header_holder_landing" :class="{ onScroll: !view.topOfPage }">
+  <div
+    class="app_header_holder_landing logged_header"
+    :class="{ onScroll: !view.topOfPage }"
+  >
     <v-container>
       <header class="app_header">
         <div class="app_header--left">
@@ -24,15 +27,10 @@
           </div>
         </div>
         <div class="app_header--right">
-          <v-btn to="/auth/login" class="btnStyle loginBtn d-none d-md-flex">
-            Login
-          </v-btn>
-          <v-btn
-            to="/auth/register"
-            class="btnStyle registerBtn d-none d-md-flex"
-          >
-            Register
-          </v-btn>
+          <!-- Notifications -->
+          <Notifications :with-scroll="!view.topOfPage" />
+          <!-- Profile Selection -->
+          <ProfileSelection :with-scroll="!view.topOfPage" />
           <!-- Language Selection -->
           <LangSelection :landing="true" :with-scroll="!view.topOfPage" />
           <!-- Icon to open menu in responsive -->
@@ -83,12 +81,16 @@
 
 <script>
 import LangSelection from "@/components/shared/LangSelection";
+import ProfileSelection from "@/components/shared/ProfileSelection";
+import Notifications from "@/components/shared/Notifications";
 
 export default {
-  name: "Navbar",
+  name: "LoggedNavbar",
 
   components: {
     LangSelection,
+    ProfileSelection,
+    Notifications,
   },
 
   data() {
@@ -208,18 +210,6 @@ export default {
       align-items: center;
       justify-content: flex-end;
       column-gap: 16px;
-
-      .loginBtn {
-        @include buttonStyle(#fff, $purpleColor, $purpleColor);
-        padding: 10px 20px;
-        text-transform: capitalize;
-      }
-
-      .registerBtn {
-        @include buttonStyle($greenColor, #fff, transparent);
-        padding: 10px 20px;
-        text-transform: capitalize;
-      }
     }
   }
 

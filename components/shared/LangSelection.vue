@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'LangSelection',
+  name: "LangSelection",
   props: {
     landing: {
       type: Boolean,
@@ -35,14 +35,14 @@ export default {
 
   data() {
     return {
-      select: { text: 'English', val: 'en' },
+      select: { text: "English", val: "en" },
       items: [
-        { text: 'English', val: 'en' },
-        { text: 'عربي', val: 'ar' },
+        { text: "English", val: "en" },
+        { text: "عربي", val: "ar" },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -163,7 +163,7 @@ export default {
   .v-list {
     padding: 0 !important;
     box-shadow: none !important;
-    background-color: rgba(#634ddc, 0.98) !important;
+    background-color: #9481ff !important;
     backdrop-filter: brightness(15) blur(30px) opacity(0);
     border-radius: 5px !important;
     color: #fff !important;
@@ -214,24 +214,24 @@ export default {
   .v-list {
     padding: 0 !important;
     box-shadow: none !important;
-    background-color: rgba(#fff, 0.98) !important;
+    background-color: #9481ff !important;
     backdrop-filter: brightness(15) blur(30px) opacity(0);
     border-radius: 5px !important;
-    color: #634ddc !important;
+    color: #fff !important;
 
     &-item {
       padding: 13px 20px !important;
       min-height: auto !important;
-      color: #634ddc !important;
+      color: #fff !important;
       font-weight: 500;
       font-family: bokraFontMedium, sans-serif;
 
       &.primary--text {
-        color: #634ddc !important;
+        color: #fff !important;
       }
 
       &--active {
-        color: #634ddc !important;
+        color: #fff !important;
         font-weight: 600;
       }
 
@@ -261,7 +261,7 @@ export default {
 
   &.withScrollMenu {
     .v-list {
-      background-color: rgba(#634ddc, 0.98) !important;
+      background-color: #9481ff !important;
 
       &-item {
         color: #fff !important;

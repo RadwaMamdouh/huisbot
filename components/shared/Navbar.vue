@@ -28,7 +28,9 @@
           >
             Register
           </v-btn>
+          <!-- Language Selection -->
           <LangSelection />
+          <!-- Icon to open menu in responsive -->
           <v-app-bar-nav-icon
             class="d-block d-md-none"
             @click="drawer = true"
@@ -37,6 +39,7 @@
       </header>
     </v-container>
 
+    <!-- Menu in responsive -->
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-btn class="close_Menu" @click="drawer = false">
         <v-icon>mdi-close</v-icon>
@@ -74,10 +77,10 @@
 </template>
 
 <script>
-import LangSelection from '@/components/shared/LangSelection'
+import LangSelection from "@/components/shared/LangSelection";
 
 export default {
-  name: 'Navbar',
+  name: "Navbar",
 
   components: {
     LangSelection,
@@ -90,23 +93,23 @@ export default {
       },
       drawer: false,
       group: null,
-    }
+    };
   },
 
   beforeMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener("scroll", this.handleScroll);
   },
 
   methods: {
     handleScroll() {
       if (window.pageYOffset > 0) {
-        if (this.view.topOfPage) this.view.topOfPage = false
+        if (this.view.topOfPage) this.view.topOfPage = false;
       } else if (!this.view.topOfPage) {
-        this.view.topOfPage = true
+        this.view.topOfPage = true;
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -159,7 +162,7 @@ export default {
           transition: 0.3s;
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
