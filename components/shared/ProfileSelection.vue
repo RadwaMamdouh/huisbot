@@ -21,7 +21,7 @@
     </template>
     <v-list class="profile_selection_list">
       <v-list-item>
-        <nuxt-link to="">
+        <nuxt-link to="/account/">
           <img src="@/assets/img/my-account.svg" alt="" />
           <span>My account</span>
         </nuxt-link>
