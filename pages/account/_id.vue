@@ -88,7 +88,10 @@
               </div>
               <div class="address_box--links">
                 <nuxt-link to="">Edit</nuxt-link>
-                <nuxt-link to="" @click.native.prevent="deleteAddress()">
+                <nuxt-link
+                  to=""
+                  @click.native.prevent="deleteAddress((dialog = true))"
+                >
                   Remove
                 </nuxt-link>
               </div>
@@ -126,7 +129,10 @@
               <div class="address_box--links">
                 <nuxt-link to="">Make Default</nuxt-link>
                 <nuxt-link to="">Edit</nuxt-link>
-                <nuxt-link to="" @click.native.prevent="deleteAddress()">
+                <nuxt-link
+                  to=""
+                  @click.native.prevent="deleteAddress((dialog = true))"
+                >
                   Remove
                 </nuxt-link>
               </div>
@@ -135,17 +141,30 @@
         </v-row>
       </div>
     </div>
+    <DeleteAddress :openDialog="dialog" @clicked="deleteAddress" />
   </div>
 </template>
 
 <script>
+import DeleteAddress from "@/components/shared/DeleteAddress";
+
 export default {
   name: "MyProfile",
   layout: "loggedLayout",
 
+  components: {
+    DeleteAddress,
+  },
+
+  data() {
+    return {
+      dialog: false,
+    };
+  },
+
   methods: {
-    deleteAddress() {
-      console.log("deleteAddress");
+    deleteAddress(value) {
+      this.dialog = value;
     },
   },
 };
