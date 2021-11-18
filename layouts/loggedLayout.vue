@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <Navbar />
+    <LoggedNavbar :withBg="true" />
     <v-main>
       <Nuxt />
     </v-main>
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import Navbar from "@/components/landing/Navbar";
+import LoggedNavbar from "@/components/loggedNavbar/Navbar";
 import Footer from "@/components/shared/Footer";
 
 export default {
   components: {
-    Navbar,
+    LoggedNavbar,
     Footer,
   },
 };

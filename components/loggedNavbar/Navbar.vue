@@ -1,18 +1,22 @@
 <template>
   <div
     class="app_header_holder_landing logged_header"
-    :class="{ onScroll: !view.topOfPage }"
+    :class="`${!view.topOfPage ? 'onScroll' : ''} ${withBg ? 'withBg' : ''}`"
   >
     <v-container>
       <header class="app_header">
         <div class="app_header--left">
           <nuxt-link to="/" class="logo">
             <img
-              v-if="view.topOfPage"
+              v-if="withBg || view.topOfPage"
               src="@/assets/img/Huisbot-white.png"
               alt=""
             />
-            <img v-if="!view.topOfPage" src="@/assets/img/Huisbot.png" alt="" />
+            <img
+              v-if="!view.topOfPage && !withBg"
+              src="@/assets/img/Huisbot.png"
+              alt=""
+            />
           </nuxt-link>
           <div class="menu_links d-none d-md-flex">
             <nuxt-link to="/">
@@ -30,16 +34,16 @@
           <!-- Invite Freinds -->
           <InviteFreinds />
           <!-- Notifications -->
-          <Notifications :with-scroll="!view.topOfPage" />
+          <Notifications :with-scroll="!view.topOfPage && !withBg" />
           <!-- Profile Selection -->
           <ProfileSelection
-            :with-scroll="!view.topOfPage"
+            :with-scroll="!view.topOfPage && !withBg"
             :responsive="false"
           />
           <!-- Language Selection -->
           <LangSelection
             :landing="true"
-            :with-scroll="!view.topOfPage"
+            :with-scroll="!view.topOfPage && !withBg"
             :responsive="false"
           />
           <!-- Icon to open menu in responsive -->
@@ -103,6 +107,12 @@ export default {
     ProfileSelection,
     Notifications,
     InviteFreinds,
+  },
+
+  props: {
+    withBg: {
+      type: Boolean,
+    },
   },
 
   data() {
@@ -246,6 +256,37 @@ export default {
         &:hover,
         &.nuxt-link-exact-active {
           color: #fff;
+        }
+      }
+    }
+  }
+
+  &.withBg {
+    background-image: url("@/assets/img/header-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    max-height: 65px;
+    background-color: $purpleColor;
+
+    &.onScroll {
+      box-shadow: 0 2px 20px rgba(#fff, 0.2);
+      backdrop-filter: brightness(10) blur(10px) opacity(0);
+
+      .menu_links {
+        a {
+          color: #fff;
+
+          &::before {
+            background-color: #fff;
+          }
+
+          &:hover,
+          &.nuxt-link-exact-active {
+            color: #634ddc;
+          }
         }
       }
     }
