@@ -69,6 +69,7 @@ export default {
 <style lang="scss" scoped>
 .sideBar_wrapper {
   background-color: #fbfbff;
+  padding: 30px 50px 274px;
   #{$ltr} & {
     border-radius: 9px 0 0 9px;
     border-right: 1px solid #e6e8ff;
@@ -77,7 +78,6 @@ export default {
     border-radius: 0 9px 9px 0;
     border-left: 1px solid #e6e8ff;
   }
-  padding: 30px 50px;
 
   ul {
     list-style: none !important;
