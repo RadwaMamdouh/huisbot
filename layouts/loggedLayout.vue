@@ -14,10 +14,10 @@
           </p>
           <div class="page_content">
             <v-row>
-              <v-col cols="12" md="4">
+              <v-col cols="12" md="4" class="colBg">
                 <SideBar />
               </v-col>
-              <v-col cols="12" md="8"><Nuxt /></v-col>
+              <v-col cols="12" md="8" class="bgCol"><Nuxt /></v-col>
             </v-row>
           </div>
         </v-container>
@@ -74,6 +74,25 @@ export default {
     span {
       font-size: 14px;
       text-align: center;
+    }
+  }
+
+  .page_content {
+    .colBg {
+      background-color: #fbfbff;
+      #{$ltr} & {
+        border-radius: 9px 0 0 9px;
+        border-right: 1px solid #e6e8ff;
+      }
+      #{$rtl} & {
+        border-radius: 0 9px 9px 0;
+        border-left: 1px solid #e6e8ff;
+      }
+    }
+
+    .bgCol {
+      background-color: rgba(#f7f7ff, 0.31);
+      border-radius: 7px;
     }
   }
 }
