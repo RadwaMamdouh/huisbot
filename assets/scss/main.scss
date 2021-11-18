@@ -1,26 +1,30 @@
-@import '../variables';
+@import "../variables";
 
 // FONTS
 @font-face {
   font-family: bokraFont;
-  src: url('../fonts/bokra.ttf');
+  src: url("../fonts/bokra.ttf");
 }
 
 @font-face {
+  font-family: bokraFontLight;
+  src: url("../fonts/Bukra-Light.otf");
+}
+@font-face {
   font-family: bokraFontRegular;
-  src: url('../fonts/Bukra-Regular.ttf');
+  src: url("../fonts/Bukra-Regular.ttf");
 }
 @font-face {
   font-family: bokraFontMedium;
-  src: url('../fonts/Bukra-Medium.otf');
+  src: url("../fonts/Bukra-Medium.otf");
 }
 @font-face {
   font-family: bokraFontBold;
-  src: url('../fonts/Bukra-Bold.otf');
+  src: url("../fonts/Bukra-Bold.otf");
 }
 @font-face {
   font-family: bokraFontBlack;
-  src: url('../fonts/Bukra-Black.otf');
+  src: url("../fonts/Bukra-Black.otf");
 }
 
 // Global Style
@@ -90,11 +94,11 @@ body::-webkit-scrollbar-thumb,
   }
 }
 
-body[dir='ltr'] {
+body[dir="ltr"] {
   direction: ltr;
 }
 
-body[dir='rtl'] {
+body[dir="rtl"] {
   direction: rtl;
 }
 

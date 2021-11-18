@@ -14,7 +14,9 @@
           </p>
           <div class="page_content">
             <v-row>
-              <v-col cols="12" md="4">Sidebar</v-col>
+              <v-col cols="12" md="4">
+                <SideBar />
+              </v-col>
               <v-col cols="12" md="8"><Nuxt /></v-col>
             </v-row>
           </div>
@@ -28,12 +30,14 @@
 <script>
 import LoggedNavbar from "@/components/loggedNavbar/Navbar";
 import BreadCrumb from "@/components/shared/BreadCrumb";
+import SideBar from "@/components/shared/SideBar";
 import Footer from "@/components/shared/Footer";
 
 export default {
   components: {
     LoggedNavbar,
     BreadCrumb,
+    SideBar,
     Footer,
   },
 
