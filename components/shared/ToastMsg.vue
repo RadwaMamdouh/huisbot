@@ -6,9 +6,9 @@
         <div class="icon" v-if="icon">
           <v-icon>mdi-check</v-icon>
         </div>
-        <div class="tit">Hello! Elean Ali</div>
+        <div class="tit">{{ msgTitle }}</div>
       </div>
-      <div class="txt">You have been successfully update your password</div>
+      <div class="txt">{{ msgContent }}</div>
     </div>
   </div>
 </template>
@@ -21,6 +21,12 @@ export default {
     icon: {
       type: Boolean,
       required: true,
+    },
+    msgTitle: {
+      type: String,
+    },
+    msgContent: {
+      type: String,
     },
   },
 
@@ -76,6 +82,11 @@ export default {
     #{$rtl} & {
       padding: 12px 59px 12px 16px;
     }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
     .head {
       display: flex;

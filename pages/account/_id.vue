@@ -141,12 +141,20 @@
         </v-row>
       </div>
     </div>
+    <!-- Delete Address Modal -->
     <DeleteAddress :openDialog="dialog" @clicked="deleteAddress" />
+    <!-- Toast Message -->
+    <ToastMsg
+      :icon="true"
+      msgTitle="Password change"
+      msgContent="Your password had been changed"
+    />
   </div>
 </template>
 
 <script>
 import DeleteAddress from "@/components/shared/DeleteAddress";
+import ToastMsg from "@/components/shared/ToastMsg";
 
 export default {
   name: "MyProfile",
@@ -154,6 +162,7 @@ export default {
 
   components: {
     DeleteAddress,
+    ToastMsg,
   },
 
   data() {

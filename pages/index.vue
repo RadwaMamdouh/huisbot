@@ -97,7 +97,11 @@
     <!-- Not Member Modal -->
     <NotMember />
     <!-- Toast Message -->
-    <ToastMsg :icon="false" />
+    <ToastMsg
+      :icon="false"
+      msgTitle="Hello! Elean Ali"
+      msgContent="You have been successfully update your password"
+    />
   </div>
 </template>
 
