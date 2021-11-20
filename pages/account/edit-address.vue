@@ -6,6 +6,7 @@
           <img src="@/assets/img/back-arrow.svg" alt="" class="back_btn" />
         </nuxt-link>
         <h2>Edit Address Information</h2>
+        <!-- <h2>Add A New Address</h2> -->
       </div>
       <div class="right">
         <nuxt-link to="/account/" class="not_now" text>Cancel</nuxt-link>
