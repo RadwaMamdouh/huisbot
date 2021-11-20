@@ -3,7 +3,7 @@
     class="app_header_holder_landing logged_header"
     :class="`${!view.topOfPage ? 'onScroll' : ''} ${withBg ? 'withBg' : ''}`"
   >
-    <v-container>
+    <v-container class="custom_container">
       <header class="app_header">
         <div class="app_header--left">
           <nuxt-link to="/" class="logo">
@@ -155,6 +155,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 
     &--left {
       display: flex;
@@ -187,7 +188,7 @@ export default {
           font-weight: 500;
           font-family: bokraFontMedium, sans-serif;
           color: #fff;
-          padding: 10px;
+          padding: 22px 10px;
           position: relative;
           transition: 0.3s;
 
