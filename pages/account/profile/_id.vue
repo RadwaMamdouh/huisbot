@@ -181,9 +181,9 @@ export default {
 
 <style lang="scss">
 .my_profile {
-  padding-top: 16px;
-  padding-inline-end: 32px;
-  padding-inline-start: 15px;
+  // padding-top: 16px;
+  // padding-inline-end: 32px;
+  // padding-inline-start: 15px;
 
   .head {
     display: flex;
