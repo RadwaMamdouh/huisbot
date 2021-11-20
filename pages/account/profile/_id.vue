@@ -2,7 +2,7 @@
   <div class="my_profile">
     <div class="head">
       <h2>Personal Information</h2>
-      <nuxt-link to="edit-profile" class="edit_btn">
+      <nuxt-link to="profile/edit-profile" class="edit_btn">
         <img src="@/assets/img/edit-icon.svg" alt="" />
         <span>Edit</span>
       </nuxt-link>
@@ -49,7 +49,7 @@
     <div class="address_information">
       <div class="head">
         <h2>Address Information</h2>
-        <nuxt-link to="edit-address" class="edit_btn">
+        <nuxt-link to="profile/edit-address" class="edit_btn">
           <v-icon>mdi-plus</v-icon>
           <span>Add A New Address</span>
         </nuxt-link>
@@ -87,7 +87,7 @@
                 </v-row>
               </div>
               <div class="address_box--links">
-                <nuxt-link to="edit-address">Edit</nuxt-link>
+                <nuxt-link to="profile/edit-address">Edit</nuxt-link>
                 <nuxt-link
                   to=""
                   @click.native.prevent="deleteAddress((dialog = true))"
@@ -128,7 +128,7 @@
               </div>
               <div class="address_box--links">
                 <nuxt-link to="">Make Default</nuxt-link>
-                <nuxt-link to="edit-address">Edit</nuxt-link>
+                <nuxt-link to="profile/edit-address">Edit</nuxt-link>
                 <nuxt-link
                   to=""
                   @click.native.prevent="deleteAddress((dialog = true))"

@@ -9,7 +9,7 @@
         <!-- <h2>Add A New Address</h2> -->
       </div>
       <div class="right">
-        <nuxt-link to="/account/" class="not_now" text>Cancel</nuxt-link>
+        <nuxt-link to="/account/profile" class="not_now" text>Cancel</nuxt-link>
         <v-btn class="complete" text>Save</v-btn>
       </div>
     </div>

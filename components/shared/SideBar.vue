@@ -2,7 +2,7 @@
   <div class="sideBar_wrapper">
     <ul>
       <li>
-        <nuxt-link to="/account/">
+        <nuxt-link to="/account/profile">
           <div class="top">
             <div class="icon">
               <img src="@/assets/img/profile.svg" alt="" />
@@ -70,8 +70,12 @@ export default {
 .sideBar_wrapper {
   padding: 18px 50px 274px;
 
+  @media (max-width: 1264.98px) {
+    padding: 18px 10px 274px;
+  }
+
   @media (max-width: 960.98px) {
-    padding: 18px 50px 100px;
+    padding: 18px 50px 50px;
   }
 
   ul {
