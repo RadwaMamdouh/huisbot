@@ -2,7 +2,7 @@
   <div class="my_profile">
     <div class="head">
       <h2>Personal Information</h2>
-      <nuxt-link to="" class="edit_btn">
+      <nuxt-link to="edit-profile" class="edit_btn">
         <img src="@/assets/img/edit-icon.svg" alt="" />
         <span>Edit</span>
       </nuxt-link>
@@ -237,9 +237,9 @@ export default {
     .profile_pic {
       width: 157px;
       height: 157px;
+      border: 7px solid #fff;
+      box-shadow: 0 0 42px rgba(#3337a5, 0.13);
       border-radius: 100%;
-      background-color: #fff;
-      padding: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
