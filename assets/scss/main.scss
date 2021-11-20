@@ -138,3 +138,15 @@ input:-webkit-autofill:active {
     }
   }
 }
+
+// Input and Select
+.v-input {
+  .v-label {
+    &,
+    &--active,
+    &.primary--text {
+      font-size: 14px;
+      color: rgba(#626366, 0.5) !important;
+    }
+  }
+}

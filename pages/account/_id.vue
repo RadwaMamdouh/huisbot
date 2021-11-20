@@ -2,10 +2,10 @@
   <div class="my_profile">
     <div class="head">
       <h2>Personal Information</h2>
-      <v-btn class="edit_btn">
+      <nuxt-link to="" class="edit_btn">
         <img src="@/assets/img/edit-icon.svg" alt="" />
         <span>Edit</span>
-      </v-btn>
+      </nuxt-link>
     </div>
     <div class="peronal_informaton">
       <v-row>
@@ -49,10 +49,10 @@
     <div class="address_information">
       <div class="head">
         <h2>Address Information</h2>
-        <v-btn class="edit_btn">
+        <nuxt-link to="edit-address" class="edit_btn">
           <v-icon>mdi-plus</v-icon>
           <span>Add A New Address</span>
-        </v-btn>
+        </nuxt-link>
       </div>
       <div class="address_info">
         <!-- <div class="no_address">You Didn’t Have Add Address Yet</div> -->
@@ -87,7 +87,7 @@
                 </v-row>
               </div>
               <div class="address_box--links">
-                <nuxt-link to="">Edit</nuxt-link>
+                <nuxt-link to="edit-address">Edit</nuxt-link>
                 <nuxt-link
                   to=""
                   @click.native.prevent="deleteAddress((dialog = true))"
@@ -128,7 +128,7 @@
               </div>
               <div class="address_box--links">
                 <nuxt-link to="">Make Default</nuxt-link>
-                <nuxt-link to="">Edit</nuxt-link>
+                <nuxt-link to="edit-address">Edit</nuxt-link>
                 <nuxt-link
                   to=""
                   @click.native.prevent="deleteAddress((dialog = true))"
@@ -157,7 +157,7 @@ import DeleteAddress from "@/components/shared/DeleteAddress";
 import ToastMsg from "@/components/shared/ToastMsg";
 
 export default {
-  name: "MyProfile",
+  name: "AccountIndex",
   layout: "loggedLayout",
 
   components: {
@@ -199,24 +199,33 @@ export default {
     }
 
     .edit_btn {
-      @extend %btn;
-      padding: 5px 12px !important;
+      padding: 5px 12px;
       background-color: rgba(#e6e8ff, 0.33);
       border-radius: 2px;
       color: $greenColor;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 4px;
+      border: 1px solid transparent;
+      transition: 0.3s;
 
-      .v-btn__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 4px;
+      .v-icon {
+        font-size: 16px;
+        color: $greenColor;
+        font-family: bokraFontMedium, sans-serif;
+      }
 
-        span {
-          font-size: 12px;
-          color: $greenColor;
-          font-family: bokraFontMedium, sans-serif;
-          text-transform: capitalize;
-        }
+      span {
+        font-size: 12px;
+        color: $greenColor;
+        font-family: bokraFontMedium, sans-serif;
+        text-transform: capitalize;
+      }
+
+      &:hover {
+        border-color: $greenColor;
       }
     }
   }

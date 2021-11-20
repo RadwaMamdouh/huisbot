@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Arrow" transform="translate(20 20) rotate(180)">
+    <rect id="Area" width="20" height="20" fill="none"/>
+    <path id="Border" d="M11.4,10,1.436,20,0,18.56,8.593,9.977.023,1.417,1.436,0Z" transform="translate(6)" fill="#634ddc"/>
+  </g>
+</svg>
