@@ -109,6 +109,7 @@ export default {
         color: #111111;
         font-family: bokraFontMedium, sans-serif;
         margin-bottom: 0;
+        font-weight: 500;
 
         @media (max-width: 1024.98px) {
           font-size: 20px;

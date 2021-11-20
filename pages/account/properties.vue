@@ -324,6 +324,7 @@ export default {
     color: #111111;
     font-family: bokraFontMedium, sans-serif;
     margin-bottom: 32px;
+    font-weight: 500;
   }
 
   .properties_content {
@@ -339,6 +340,7 @@ export default {
         color: #111111;
         font-family: bokraFontMedium, sans-serif;
         margin-bottom: 10px;
+        font-weight: 500;
       }
 
       .input_holder {
@@ -457,6 +459,7 @@ export default {
               font-size: 14px;
               margin-bottom: 9px;
               color: #111111;
+              font-weight: 400;
             }
 
             .v-input {

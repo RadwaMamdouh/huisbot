@@ -53,22 +53,22 @@
 
 <script>
 export default {
-  name: 'Reset',
+  name: "Reset",
 
   data() {
     return {
       show1: false,
-      password: '',
+      password: "",
       rules: {
-        required: (value) => !!value || 'Required.',
-        min: (v) => v.length >= 8 || 'Min 8 characters',
+        required: (value) => !!value || "Required.",
+        min: (v) => v.length >= 8 || "Min 8 characters",
         emailMatch: () => `The email and password you entered don't match`,
       },
 
-      confirmPassword: '',
-    }
+      confirmPassword: "",
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -107,6 +107,7 @@ export default {
 
   span {
     font-family: bokraFontBlack, sans-serif;
+    font-weight: 900;
 
     &:first-child {
       #{$ltr} & {
@@ -175,6 +176,7 @@ export default {
     .v-btn__content {
       span {
         font-family: bokraFontMedium, sans-serif;
+        font-weight: 500;
       }
     }
 
@@ -218,7 +220,7 @@ export default {
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         height: 1px;
         width: 100%;
         background-color: #d8d2f6;

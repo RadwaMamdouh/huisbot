@@ -87,6 +87,7 @@ export default {
           margin: 0 !important;
           overflow: unset !important;
           font-family: bokraFontMedium, sans-serif;
+          font-weight: 500;
         }
 
         input {

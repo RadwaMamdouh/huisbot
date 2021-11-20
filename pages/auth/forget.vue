@@ -41,18 +41,18 @@
 
 <script>
 export default {
-  name: 'Forget',
+  name: "Forget",
 
   data() {
     return {
-      email: '',
+      email: "",
       emailRules: [
-        (v) => !!v || 'E-mail is required',
-        (v) => /.+@.+/.test(v) || 'E-mail must be valid',
+        (v) => !!v || "E-mail is required",
+        (v) => /.+@.+/.test(v) || "E-mail must be valid",
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -103,6 +103,7 @@ export default {
 
   span {
     font-family: bokraFontBlack, sans-serif;
+    font-weight: 900;
 
     &:first-child {
       #{$ltr} & {
@@ -172,6 +173,7 @@ export default {
     .v-btn__content {
       span {
         font-family: bokraFontMedium, sans-serif;
+        font-weight: 500;
       }
     }
 
@@ -215,7 +217,7 @@ export default {
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         height: 1px;
         width: 100%;
         background-color: #d8d2f6;

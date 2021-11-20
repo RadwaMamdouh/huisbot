@@ -196,6 +196,7 @@ export default {
       color: #111111;
       font-family: bokraFontMedium, sans-serif;
       margin-bottom: 0;
+      font-weight: 500;
     }
 
     .edit_btn {
@@ -215,6 +216,7 @@ export default {
         font-size: 16px;
         color: $greenColor;
         font-family: bokraFontMedium, sans-serif;
+        font-weight: 500;
       }
 
       span {
@@ -222,6 +224,7 @@ export default {
         color: $greenColor;
         font-family: bokraFontMedium, sans-serif;
         text-transform: capitalize;
+        font-weight: 500;
       }
 
       &:hover {
@@ -289,6 +292,7 @@ export default {
             font-size: 12px;
             color: $greenColor;
             font-family: bokraFontMedium, sans-serif;
+            font-weight: 500;
           }
         }
       }

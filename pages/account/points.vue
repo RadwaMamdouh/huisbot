@@ -113,6 +113,7 @@ export default {
     color: #111111;
     font-family: bokraFontMedium, sans-serif;
     margin-bottom: 32px;
+    font-weight: 500;
   }
 
   .top {
@@ -129,6 +130,7 @@ export default {
       color: $greenColor;
       font-family: bokraFontMedium, sans-serif;
       margin-bottom: 14px;
+      font-weight: 500;
     }
 
     &--list {
@@ -173,12 +175,14 @@ export default {
       color: $greenColor;
       margin-bottom: 6px;
       font-family: bokraFontBlack, sans-serif;
+      font-weight: 900;
     }
     h5 {
       font-size: 28px;
       color: #111111;
       font-family: bokraFontMedium, sans-serif;
       margin-bottom: 0;
+      font-weight: 500;
     }
   }
 
@@ -260,6 +264,7 @@ export default {
         color: #313131;
         font-family: bokraFontMedium, sans-serif;
         margin-bottom: 19px;
+        font-weight: 500;
       }
 
       &--desc {
@@ -288,6 +293,7 @@ export default {
             &:first-child {
               color: #111111;
               font-family: bokraFontMedium, sans-serif;
+              font-weight: 500;
             }
             &:last-child {
               color: #626366;

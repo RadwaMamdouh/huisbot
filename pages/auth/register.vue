@@ -215,6 +215,7 @@ export default {
 
   span {
     font-family: bokraFontBlack, sans-serif;
+    font-weight: 900;
 
     &:first-child {
       #{$ltr} & {
@@ -266,6 +267,7 @@ export default {
     .v-btn__content {
       span {
         font-family: bokraFontMedium, sans-serif;
+        font-weight: 500;
       }
     }
 

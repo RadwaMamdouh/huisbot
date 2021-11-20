@@ -197,6 +197,7 @@ export default {
 
           span {
             font-family: bokraFontMedium, sans-serif;
+            font-weight: 500;
           }
         }
       }
@@ -307,6 +308,7 @@ export default {
 
           span {
             font-family: bokraFontMedium, sans-serif;
+            font-weight: 500;
           }
         }
       }
