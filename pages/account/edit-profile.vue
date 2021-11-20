@@ -26,7 +26,7 @@
               </div>
             </label>
           </v-col>
-          <v-col cols="6" md="6">
+          <v-col cols="12" sm="6">
             <div class="input_holder">
               <v-text-field
                 v-model="name"
@@ -36,7 +36,7 @@
               ></v-text-field>
             </div>
           </v-col>
-          <v-col cols="6" md="6">
+          <v-col cols="12" sm="6">
             <div class="input_holder country_phone">
               <v-select
                 v-model="select"
@@ -85,7 +85,7 @@
                 name="input-7-1"
                 label="Description"
                 value="In Publishing And Graphic Design, Lorem Ipsum Is A Placeholder Text Commonly Used To Demonstrate The Visual Form Of A Document Or A Typeface Without Relying On Meaningful Content. Lorem Ipsum May Be Used As A Placeholder Before Final Copy Is Available."
-                no-resize="true"
+                no-resize
               ></v-textarea>
             </div>
           </v-col>
@@ -135,6 +135,8 @@ export default {
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+/.test(v) || "E-mail must be valid",
       ],
+
+      phoneNumber: "",
     };
   },
 };
@@ -147,6 +149,11 @@ export default {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @media (max-width: 600.98px) {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
 
     .left {
       display: flex;
@@ -183,6 +190,10 @@ export default {
         color: #111111;
         font-family: bokraFontMedium, sans-serif;
         margin-bottom: 0;
+
+        @media (max-width: 1024.98px) {
+          font-size: 20px;
+        }
       }
     }
 
@@ -191,6 +202,11 @@ export default {
       align-items: center;
       justify-content: flex-start;
       column-gap: 16px;
+
+      @media (max-width: 600.98px) {
+        width: 100%;
+        justify-content: flex-end;
+      }
 
       .v-btn {
         @extend %btn;
@@ -310,6 +326,14 @@ export default {
   .code_number {
     max-width: 25%;
     position: relative;
+
+    @media (max-width: 1024.98px) {
+      max-width: 40%;
+    }
+
+    @media (max-width: 600.98px) {
+      max-width: 30%;
+    }
 
     &::after {
       content: "";

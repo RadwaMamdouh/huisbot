@@ -5,8 +5,7 @@
         <nuxt-link to="" @click.native.prevent="$router.go(-1)">
           <img src="@/assets/img/back-arrow.svg" alt="" class="back_btn" />
         </nuxt-link>
-        <h2>Edit Address Information</h2>
-        <!-- <h2>Add A New Address</h2> -->
+        <h2>Change password</h2>
       </div>
       <div class="right">
         <nuxt-link to="/account/" class="not_now" text>Cancel</nuxt-link>
@@ -15,31 +14,45 @@
     </div>
     <v-form>
       <v-row>
-        <v-col cols="12" md="6">
-          <div class="input_holder">
-            <v-select
-              :items="items"
-              label="Region"
-              placeholder="Select Option"
-              required
-            ></v-select>
-          </div>
-        </v-col>
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="12">
           <div class="input_holder">
             <v-text-field
-              label="Zip Code"
-              placeholder="Enter Zip Code"
-              required
+              v-model="currentPassword"
+              :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+              :rules="[rules.required, rules.min]"
+              :type="show1 ? 'text' : 'password'"
+              label="Current Password"
+              placeholder="Please Enter Your Current Password"
+              hint="At least 8 characters"
+              @click:append="show1 = !show1"
             ></v-text-field>
           </div>
         </v-col>
         <v-col cols="12" md="12">
           <div class="input_holder">
             <v-text-field
-              label="Address"
-              placeholder="Please Enter Your Address"
-              required
+              v-model="newPassword"
+              :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+              :rules="[rules.required, rules.min]"
+              :type="show1 ? 'text' : 'password'"
+              label="New Password"
+              placeholder="Please Enter Your New Password"
+              hint="At least 8 characters"
+              @click:append="show1 = !show1"
+            ></v-text-field>
+          </div>
+        </v-col>
+        <v-col cols="12" md="12">
+          <div class="input_holder">
+            <v-text-field
+              v-model="confirmPassword"
+              :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+              :rules="[rules.required, rules.min]"
+              :type="show1 ? 'text' : 'password'"
+              label="Re-Type New Password"
+              placeholder="Please Retype Your New Password To Confirm It"
+              hint="At least 8 characters"
+              @click:append="show1 = !show1"
             ></v-text-field>
           </div>
         </v-col>
@@ -50,12 +63,21 @@
 
 <script>
 export default {
-  name: "edit-address",
+  name: "change-password",
   layout: "loggedLayout",
 
   data() {
     return {
-      items: ["Dasman", "Al Salmia"],
+      show1: false,
+      currentPassword: "",
+      rules: {
+        required: (value) => !!value || "Required.",
+        min: (v) => v.length >= 8 || "Min 8 characters",
+        emailMatch: () => `The email and password you entered don't match`,
+      },
+
+      newPassword: "",
+      confirmPassword: "",
     };
   },
 };
@@ -167,10 +189,14 @@ export default {
     }
   }
 
-  .v-select {
-    .v-input__icon {
-      .v-icon {
-        color: #3337a5;
+  .input_holder {
+    .v-input {
+      &__icon {
+        .v-icon {
+          &.mdi-eye {
+            color: $purpleColor;
+          }
+        }
       }
     }
   }

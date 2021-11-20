@@ -70,6 +70,10 @@ export default {
 .sideBar_wrapper {
   padding: 18px 50px 274px;
 
+  @media (max-width: 960.98px) {
+    padding: 18px 50px 100px;
+  }
+
   ul {
     list-style: none !important;
     padding: 0 !important;

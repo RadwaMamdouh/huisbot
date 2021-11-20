@@ -149,4 +149,11 @@ input:-webkit-autofill:active {
       color: rgba(#626366, 0.5) !important;
     }
   }
+
+  .v-messages {
+    &__wrapper,
+    &__message {
+      text-align: start;
+    }
+  }
 }
