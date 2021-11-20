@@ -129,53 +129,53 @@
 
 <script>
 export default {
-  name: 'Register',
+  name: "Register",
   data() {
     return {
-      name: '',
+      name: "",
       nameRules: [
-        (v) => !!v || 'Name is required',
-        (v) => v.length <= 10 || 'Name must be less than 10 characters',
+        (v) => !!v || "Name is required",
+        (v) => v.length <= 10 || "Name must be less than 10 characters",
       ],
 
-      email: '',
+      email: "",
       emailRules: [
-        (v) => !!v || 'E-mail is required',
-        (v) => /.+@.+/.test(v) || 'E-mail must be valid',
+        (v) => !!v || "E-mail is required",
+        (v) => /.+@.+/.test(v) || "E-mail must be valid",
       ],
 
       show1: false,
-      password: '',
+      password: "",
       rules: {
-        required: (value) => !!value || 'Required.',
-        min: (v) => v.length >= 8 || 'Min 8 characters',
+        required: (value) => !!value || "Required.",
+        min: (v) => v.length >= 8 || "Min 8 characters",
         emailMatch: () => `The email and password you entered don't match`,
       },
 
-      confirmPassword: '',
-      phoneNumber: '',
+      confirmPassword: "",
+      phoneNumber: "",
 
-      select: { name: '+31', image: 'flag.svg', code: '00' },
+      select: { name: "+31", image: "flag.svg", code: "00" },
       items: [
         {
-          name: '+31',
-          image: 'flag.svg',
-          code: '00',
+          name: "+31",
+          image: "flag.svg",
+          code: "00",
         },
         {
-          name: '+21',
-          image: 'flag.svg',
-          code: '01',
+          name: "+21",
+          image: "flag.svg",
+          code: "01",
         },
         {
-          name: '+11',
-          image: 'flag.svg',
-          code: '02',
+          name: "+11",
+          image: "flag.svg",
+          code: "02",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -309,7 +309,7 @@ export default {
 
       &::before,
       &::after {
-        content: '';
+        content: "";
         height: 1px;
         width: 100%;
         background-color: #d8d2f6;
@@ -437,7 +437,7 @@ export default {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     width: 1px;
     height: 20px;
     background-color: #dee2e6;
@@ -538,7 +538,7 @@ export default {
 
 .custom_checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   column-gap: 13px;
   cursor: pointer;
